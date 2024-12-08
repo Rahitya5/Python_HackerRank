@@ -1,0 +1,3 @@
+n, m = map(int,input().split())
+pattern=[(".|."*((2*l)+1)).center(m, "-") for l in range((n-1)>>1)]
+print(*pattern, "WELCOME".center(m, "-"), *reversed(pattern), sep="\n")
