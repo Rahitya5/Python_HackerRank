@@ -1,0 +1,14 @@
+from datetime import datetime
+def timeConversion(s):
+    
+    time_obj = datetime.strptime(s, "%I:%M:%S%p") 
+    military_time = time_obj.strftime("%H:%M:%S")   
+    return military_time
+
+if __name__ == '__main__':
+
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    s = input()
+    result = timeConversion(s)
+    fptr.write(result + '\n')
+    fptr.close()
